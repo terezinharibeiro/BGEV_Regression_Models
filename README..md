@@ -1,4 +1,4 @@
-# R codes and datasets for the paper "A Regression-Type Model for Bimodal Extreme-Valued Data"
+# R codes and dataset for the paper "A Regression-Type Model for Bimodal Extreme-Valued Data"
 
 This repository contains R codes and dataset used in the application and simulations of the paper "A Regression-Type Model for Bimodal Extreme-Valued Data" by Otiniano, Lisboa, Ribeiro and Fachini-Gomes (2025).
 
@@ -18,6 +18,7 @@ Scenario1 contains the following files:
 
 - Simulation_Scenario1.R: R script to generate the results and files.
 - BGEV0_GAMLSS.R:  R function that fits BGEV regression models with xi equal to zero using the gamlss package
+
 
 
 
