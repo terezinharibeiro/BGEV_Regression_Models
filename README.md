@@ -10,6 +10,7 @@ The directory Application contains the dataset and the R scripts to replicate th
 - BGEV_GAMLSS.R:  R function that fits BGEV regression models with xi different from zero using the  gamlss package.
 - BGEV0_GAMLSS.R: R function that fits BGEV regression models with xi equal to zero using the gamlss package.
 - DTPdata.rds: File with DTP dataset.
+- IID_fit.R: R script to replicate the parameter estimation for GEV and BGEV distributions in the case of IID data.
 
 ### Simulations
 
