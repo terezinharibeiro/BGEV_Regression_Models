@@ -190,8 +190,8 @@ BGEV <- function(mu.link = "identity", sigma.link = "log", nu.link = "identity",
          sigma.valid = function(sigma) all(is.finite(sigma) & sigma > 0),
          nu.valid = function(nu) {
            valid <- all(is.finite(nu) & nu >= -0.5 & nu <=1)
-           if (!valid) warning("Algum valor de nu está fora do intervalo [-0.5, 1]")
-           TRUE  # Retorna TRUE para não interromper
+           if (!valid) warning("At least one value of nu lies outside the interval [-0.5, 1]")
+           TRUE  
          },
          tau.valid = function(tau) all(is.finite(tau) & sigma >= 0),
          y.valid = function(y) TRUE
