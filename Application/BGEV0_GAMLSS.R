@@ -40,7 +40,7 @@ BGEV0 <- function(mu.link = "identity", sigma.link = "log", nu.link = "log"){
          nu.dr = vstats$mu.eta,
                 
          
-         ######derivadas de primeira ordem
+          ######first order derivates
          dldm =  function(y, mu, sigma, nu){
            dldm = as.vector(attr(gamlss:::numeric.deriv(dBGEV0(y, mu, sigma, nu, log = TRUE), "mu", delta = 1e-04), "gradient"))
            dldm
@@ -56,7 +56,7 @@ BGEV0 <- function(mu.link = "identity", sigma.link = "log", nu.link = "log"){
            dldv
          },
 
-          #Derivada segunda com relacao ao mesmo parametro
+         #second derivates
 
           d2ldm2 = function(y, mu, sigma, nu) {
           dldm = as.vector(attr(gamlss:::numeric.deriv(dBGEV0(y, mu, sigma, nu, log = TRUE), "mu", delta = 1e-04), "gradient"))
@@ -75,10 +75,7 @@ BGEV0 <- function(mu.link = "identity", sigma.link = "log", nu.link = "log"){
             d2ldv2 = -dldv^2
            d2ldv2
            }, 
-
-         
-         #####derivadas de segunda ordem - parâmetro cruzados
-         
+  
            d2ldmdd = function(y, mu, sigma, nu) {
            dldm = as.vector(attr(gamlss:::numeric.deriv(dBGEV0(y, mu, sigma, nu, log = TRUE), "mu", delta = 1e-04), "gradient"))
            dldd = as.vector(attr(gamlss:::numeric.deriv(dBGEV0(y, mu, sigma, nu, log = TRUE), "sigma", delta = 1e-04), "gradient"))
@@ -139,7 +136,7 @@ dBGEV0 <- function(y, mu = 1, sigma = 1, nu = 0.5, log = FALSE) {
 
   abs_y_mub <- pmax(abs(y_mub), eps)  
   T <- y_mub * abs_y_mub^nu
-  T_div_sigma <- pmin(pmax(T / sigma, -700), 700)  # evita overflow no exp()
+  T_div_sigma <- pmin(pmax(T / sigma, -700), 700) 
   
 
   # Derivada de T
@@ -203,7 +200,3 @@ rBGEV0 <- function(n, mu=1, sigma=1, nu=0.5){
    
   return(rnumber)
 }
-
-
-
-
