@@ -7,8 +7,10 @@ This repository contains R codes and dataset used in the application and simulat
 The directory Application contains the dataset and the R scripts to replicate the results presented in the application section of the paper.
 
 - Application_BGEV.R: R script to replicate the inference and diagnostics results for the DTP dataset. 
-- BGEV_GAMLSS.R:  R function that fits BGEV regression models with xi different from zero using the  gamlss package.
+- BGEV_GAMLSS.R:  R function that fits BGEV regression models with xi different from zero using the gamlss package.
 - BGEV0_GAMLSS.R: R function that fits BGEV regression models with xi equal to zero using the gamlss package.
+- BGEV_GAMLSS_q99: R function that fits BGEV regression models with xi different from zero and mu denotes the 0.99 quantile using the gamlss package.
+- BGEV0_GAMLSS_q99: R function that fits BGEV regression models with xi equal to zero and mu denotes the 0.99 quantile using the gamlss package. 
 - DTPdata.rds: File with DTP dataset.
 - IID_fit.R: R script to replicate the parameter estimation for GEV and BGEV distributions in the case of IID data.
 
